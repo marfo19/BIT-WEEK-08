@@ -43,6 +43,8 @@
 // primeNumbers(20) ➞ 8 // 2, 3, 5, 7, 11, 13, 17 and 19
 // primeNumbers(30) ➞ 10 // 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29
 
+function primeNumbers(n) {}
+
 // 7. Create a function that returns an array that expands by 1 from 1 to the value of the input, and then
 // reduces back to 1. Items in the arrays will be the same as the length of the arrays.
 
@@ -50,3 +52,18 @@
 // diamondArrays(1) ➞ [1],
 // diamondArrays(2) ➞ [1, 2, 2, 1]
 // diamondArrays(5) ➞ [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
+
+function diamondArrays(n) {
+    let arr = [];
+    let arr1 = [];
+    let temp = 0;
+
+    for (let i = 0; i < n + 1; i++) {
+        arr[i] = i;
+        arr.pop();
+    }
+
+    return arr;
+}
+
+console.log(diamondArrays(3));
